@@ -1,1 +1,49 @@
+body {
+  background-color: #f9f7fd;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+}
+ul {
+  padding-left: 0;
+}
 
+.weather-app {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 30px;
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.name {
+  color: #272142;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 29px;
+  line-height: 48px;
+  margin: 20px 0 10px;
+}
+
+.weather {
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+
+.weather-row {
+  margin-top: 10px;
+}
+.temprature-container {
+  margin-top: 30px;
+
+  text-align: right;
+}
+.temprature {
+  font-size: 80px;
+  font-weight: 500;
+}
