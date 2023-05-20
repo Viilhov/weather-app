@@ -37,6 +37,7 @@ ul {
 
 .weather-row {
   margin-top: 10px;
+  align-items: center;
 }
 .temprature-container {
   margin-top: 30px;
@@ -46,4 +47,16 @@ ul {
 .temprature {
   font-size: 80px;
   font-weight: 500;
+}
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+.d-flex {
+  display: flex !important;
+}
+.unit {
+  position: relative;
+  top: -34px;
+  font-size: 28px;
+  font-weight: 400;
 }
