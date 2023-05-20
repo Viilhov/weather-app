@@ -60,3 +60,10 @@ ul {
   font-size: 28px;
   font-weight: 400;
 }
+.image {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.numbers {
+  color: #f75281;
+}
