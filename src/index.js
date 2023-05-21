@@ -29,6 +29,7 @@ function showWeatherInformation(result) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   h2.innerHTML = result.data.city;
   currentTemp.innerHTML = Math.round(result.data.temperature.current);
@@ -36,11 +37,13 @@ function showWeatherInformation(result) {
   humidity.innerHTML = result.data.temperature.humidity;
   wind.innerHTML = Math.round(result.data.wind.speed);
   dateElement.innerHTML = formatDate(result.data.time * 1000);
+  iconElement.setAttribute("src", `${result.data.condition.icon_url}`);
+  iconElement.setAttribute("alt", `${result.data.condition.description}`);
 }
 
 let apiKey = "331711t40ba7f6a03e3o8bfc5f54faa4";
 let units = "metric";
-let city = "Paris";
+let city = "Malaga";
 let cityApiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units${units}`;
 
 axios.get(cityApiUrl).then(showWeatherInformation);
