@@ -64,6 +64,9 @@ ul {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.numbers {
+.pink {
   color: #f75281;
+}
+.condition {
+  text-transform: capitalize;
 }
