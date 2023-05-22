@@ -5,6 +5,33 @@ body {
 ul {
   padding-left: 0;
 }
+.search-form {
+  border-bottom: 1px solid #f9f7fe;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+.form-control {
+  background: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, 0.4);
+  display: inline-block;
+  height: 50px;
+  line-height: 20px;
+  padding: 15px 20px;
+}
+
+.btn {
+  background: #885df1;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  height: 50px;
+  padding: 15px 0;
+}
+.weather-info {
+  margin-top: 20px;
+}
 
 .weather-app {
   max-width: 700px;

@@ -15,11 +15,27 @@
 <body>
   <div class="container">
     <div class="weather-app">
-      <div class="row">
+
+
+      <form id="search-form" class="search-form">
+        <div class="row">
+          <div class="col-9">
+            <input type="search" placeholder="Enter a city" class="form-control" />
+          </div>
+          <div class="col-3">
+            <input type="submit" class="btn btn-primary w-100" value="Search" />
+          </div>
+
+        </div>
+      </form>
+
+
+      <div class="row weather-info">
         <div class="col-6">
           <h2 class="name" id="city-name"></h2>
           <ul>
-            <li class="weather"><span id="date">Friday 10:20</span>, <span class="condition" id="condition"></span></li>
+            <li class="weather"><span id="date">Friday 10:20</span>, <span class="condition" id="condition"></span>
+            </li>
             <li class="weather"> Humidity: <span class="pink"><span id="humidity"></span>%</span>, Wind: <span
                 class="pink"><span id="wind"></span>
                 km/h</span>
