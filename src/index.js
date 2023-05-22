@@ -40,9 +40,21 @@ function showWeatherInformation(result) {
   iconElement.setAttribute("alt", `${result.data.condition.description}`);
 }
 
-let apiKey = "331711t40ba7f6a03e3o8bfc5f54faa4";
-let units = "metric";
-let city = "Malaga";
-let cityApiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units${units}`;
+function search(city) {
+  let apiKey = "331711t40ba7f6a03e3o8bfc5f54faa4";
+  let units = "metric";
+  let cityApiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units${units}`;
 
-axios.get(cityApiUrl).then(showWeatherInformation);
+  axios.get(cityApiUrl).then(showWeatherInformation);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-input");
+  search(cityInputElement.value);
+}
+
+search("Malaga");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
