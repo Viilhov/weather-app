@@ -30,8 +30,10 @@ function showWeatherInformation(result) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemperature = result.data.temperature.current;
+
   h2.innerHTML = result.data.city;
-  currentTemp.innerHTML = Math.round(result.data.temperature.current);
+  currentTemp.innerHTML = Math.round(celsiusTemperature);
   descriptionElement.innerHTML = result.data.condition.description;
   humidity.innerHTML = result.data.temperature.humidity;
   wind.innerHTML = Math.round(result.data.wind.speed);
@@ -48,13 +50,34 @@ function search(city) {
   axios.get(cityApiUrl).then(showWeatherInformation);
 }
 
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  let fahrenheitElement = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitElement);
+}
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-input");
   search(cityInputElement.value);
 }
 
-search("Malaga");
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitSelector = document.querySelector("#fahr-link");
+fahrenheitSelector.addEventListener("click", showFahrenheitTemp);
+
+let celsiusSelector = document.querySelector("#cels-link");
+celsiusSelector.addEventListener("click", showCelsiusTemp);
+
+search("Malaga");
