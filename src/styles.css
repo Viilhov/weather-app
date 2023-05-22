@@ -87,6 +87,11 @@ ul {
   font-size: 28px;
   font-weight: 400;
 }
+.utemp {
+  text-decoration: none;
+  color: #272142;
+  font-size: 26px;
+}
 .image {
   margin-top: 10px;
   margin-bottom: 10px;
