@@ -10,11 +10,14 @@ ul {
   margin-top: 40px;
   padding-bottom: 30px;
 }
+.search-input {
+  color: rgba(39, 33, 66, 0.4);
+}
 .form-control {
   background: #f9f7fe;
   border: none;
   border-radius: 6px;
-  color: rgba(39, 33, 66, 0.4);
+
   display: inline-block;
   height: 50px;
   line-height: 20px;
@@ -101,4 +104,33 @@ ul {
 }
 .condition {
   text-transform: capitalize;
+}
+.weather-forecast {
+  border-bottom: 1px solid #f9f7fe;
+  margin: 40px 0;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.forecast-day {
+  color: rgba(39, 33, 66, 0.4);
+}
+.forecast-img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 31;
+  margin-right: 31;
+}
+.forecast-temp {
+  color: #f65282;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.forecast-temp-min {
+  opacity: 0.6;
+  margin-left: 10px;
+}
+.ref {
+  text-align: center;
 }
