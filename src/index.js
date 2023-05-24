@@ -21,6 +21,36 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function showWeatherForecast() {
+  let weatherForecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+        <div class="col-2">
+          <div class="forecast-day">${day}</div>
+          <div class="forecast-img">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+              alt="sun and cloud"
+              with="38"
+              height="38"
+            />
+          </div>
+          <div class="forecast-temp">
+            <span class="forecast-temp-max">16°</span>
+            <span class="forecast-temp-min">11°</span>
+          </div>
+        </div>
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  weatherForecastElement.innerHTML = forecastHTML;
+}
+
 function showWeatherInformation(result) {
   let h2 = document.querySelector("#city-name");
   let currentTemp = document.querySelector("#temp");
@@ -81,3 +111,4 @@ let celsiusSelector = document.querySelector("#cels-link");
 celsiusSelector.addEventListener("click", showCelsiusTemp);
 
 search("Malaga");
+showWeatherForecast();
