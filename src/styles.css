@@ -109,10 +109,14 @@ ul {
   border-bottom: 1px solid #f9f7fe;
   margin: 40px 0;
   padding-bottom: 50px;
+
   text-align: center;
 }
 .forecast-day {
   color: rgba(39, 33, 66, 0.4);
+}
+.col-width {
+  width: 123.2px;
 }
 .forecast-img {
   margin-top: 10px;
@@ -133,4 +137,8 @@ ul {
 }
 .ref {
   text-align: center;
+}
+.link {
+  color: #885df1;
+  text-decoration-color: #885df1;
 }

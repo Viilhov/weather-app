@@ -40,7 +40,7 @@ function showWeatherForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="col-2">
+    <div class="col-2 col-width">
         <div class="forecast-day">${formatDay(forecastDay.time)}</div>
         <div class="forecast-img">
             <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
@@ -107,19 +107,6 @@ function search(city) {
   axios.get(cityApiUrl).then(showWeatherInformation);
 }
 
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
-  let fahrenheitElement = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitElement);
-}
-
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-input");
@@ -130,12 +117,6 @@ let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitSelector = document.querySelector("#fahr-link");
-fahrenheitSelector.addEventListener("click", showFahrenheitTemp);
-
-let celsiusSelector = document.querySelector("#cels-link");
-celsiusSelector.addEventListener("click", showCelsiusTemp);
 
 search("Malaga");
 showWeatherForecast();
