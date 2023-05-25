@@ -20,7 +20,6 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-
 function showWeatherForecast() {
   let weatherForecastElement = document.querySelector("#weather-forecast");
   let forecastHTML = `<div class="row">`;
@@ -28,26 +27,25 @@ function showWeatherForecast() {
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      ` 
-        <div class="col-2">
-          <div class="forecast-day">${day}</div>
-          <div class="forecast-img">
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-              alt="sun and cloud"
-              with="38"
-              height="38"
-            />
-          </div>
-          <div class="forecast-temp">
+      `
+    <div class="col-2">
+        <div class="forecast-day">${day}</div>
+        <div class="forecast-img">
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt="sun and cloud"
+                with="38" height="38" />
+        </div>
+        <div class="forecast-temp">
             <span class="forecast-temp-max">16°</span>
             <span class="forecast-temp-min">11°</span>
-          </div>
         </div>
-      </div>`;
+    </div>
+    `;
   });
 
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+</div>`;
   weatherForecastElement.innerHTML = forecastHTML;
 }
 
